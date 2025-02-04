@@ -1,0 +1,238 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #173e64;
+    line-height: 1.6;
+    padding: 20px;
+    background-image: url('images.jpg'); /* ضع مسار الصورة هنا */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background: linear-gradient(281deg, #d6dadf, #9b8d8d00);
+   
+}
+
+/* Main Container */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styling */
+.navbar {
+
+    background: #e2e4e8;
+    padding: 10px 20px;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0 1px 30px #c8cdd3;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(14 28 42 / 90%);
+    font-size: 1rem;
+    font-size: 17px;
+  
+}
+
+
+.navbar a:hover {
+    
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+/* Content Section */
+.content {
+    margin-top: 80px;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    margin: 20px;
+    font-size: 3rem;
+    color: rgba(0, 51, 102, 0.9);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+.navbar a.active {
+    color: #fff; /* لون النص عند التفعيل */
+    background-color: #173c61; /* خلفية الزر النشط */
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-shadow: none; /* إزالة الظل إذا كان موجودًا */
+    font-weight: bold; /* يمكن إضافة تأثير أكثر بروزًا */
+}
+
+/* Output Section */
+.output-section {
+    margin-top: 20px;
+}
+
+/* Output Box for Entities and Relationships */
+#entities-list,
+#relationships-list {
+    color: #000;
+    font-size: 1.1rem;
+}
+
+#entities-list div,
+#relationships-list div {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+
+#entities-list div:last-child,
+#relationships-list div:last-child {
+    border-bottom: none;
+}
+
+/* Output Box */
+.output-box {
+    margin-bottom: 30px;
+    padding: 25px;
+    
+    border: none; /* Removed border */
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+}
+
+.sql-statements{
+    white-space: pre-wrap;
+    background: rgb(255 255 255);
+    padding: 10px;
+    border: 1px solid rgb(240 234 234);
+    border-radius: 5px;
+    overflow-x: auto;
+    color: black;
+}
+.output-box h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #003366;
+}
+
+/* ERD Box Styling */
+.erd-box {
+    margin-top: 40px;
+}
+
+.erd-box img {
+    border: 2px solid #bfc4c9;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* transition: transform 0.3s ease; */
+}
+
+
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+
+    button{
+        padding: 15px 50px;
+    }
+}
+
+.content header{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    flex-direction: column;
+}
+textarea {
+    height: 68px;
+    width: 648px;
+    padding: 15px;
+    border: 2px solid #a3a9af;
+    border-radius: 15px;
+    font-size: 1.1rem;
+   
+    color: #333;
+    /* transition: all 0.3s ease; */
+}
+
+textarea:focus {
+    border-color: #0099ff;
+    box-shadow: 0 0 5px rgba(0, 153, 255, 0.6);
+   
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: #2a5c8f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #004a8a;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .navbar h2 {
+        font-size: 1.8rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .container {
+        padding: 0;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ERD Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body >
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <h2>SchemaBot</h2>
+            <ul>
+                <li><a href="#scenario">Enter Scenario</a></li>
+                <li><a href="#entities-list">Entities</a></li>
+                <li><a href="#relationships-list">Relationships</a></li>
+                <li><a href="#erd-container">Generated ERD</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Content Section -->
+        <div class="content">
+            <!-- Header Section -->
+            <header>
+                <h1>Welcome to SchemaBot
+                </h1>
+                <p>an automated database designer with NLP that helps you design Entities, Relations, ERD and SQL statements</p>
+             </header>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <textarea id="scenario" rows="10" cols="50" placeholder="Enter your scenario here..."></textarea><br>
+                <button onclick="processScenario()">Generate</button>
+            </div>
+
+            <!-- Output Section -->
+            <div class="output-section">
+                <!-- Entities List -->
+                <h2>Entities:</h2>
+                <div id="entities-list" class="output-box" >your entities here...</div>
+
+                <!-- Relationships List -->
+                <h2>Relationships:</h2>
+                <div id="relationships-list" class="output-box" >
+                    your relationships here...
+                </div>
+
+               <!-- SQL Statements -->
+<h2>SQL Statements:</h2>
+<div id="sql-statements" class="output-box ">
+    <pre >
+        Your SQL statements will appear here...
+    </pre>
+</div>
+ <!-- ERD Image -->
+         <h2>Generated ERD:</h2>
+         <div id="erd-container" class="erd-box" >
+         <img id="erd-image" src="" alt="ERD Image" style="display:none; width: 100%"/>
+         </div>
+     </div>
+ </div> 
+    </div>
+</body>
+</html>
